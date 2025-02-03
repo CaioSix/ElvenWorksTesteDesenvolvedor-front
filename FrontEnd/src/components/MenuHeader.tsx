@@ -14,10 +14,9 @@ const MenuHeader = ({name, itens}) => {
               <ul
                 className="absolute left-0 mt-2 hidden group-hover:grid bg-white shadow-lg rounded-lg p-4 gap-4"
                 style={{
-                  gridTemplateColumns: 'repeat(2, minmax(150px, 1fr))', // Define 2 colunas
+                  gridTemplateColumns: 'repeat(2, minmax(150px, 1fr))', 
                 }}
-              >
-                {/* Faz o mapeamento dos itens do menu */}
+              >                
                 {itens.map((item, index) => (
                   <li key={index} className="px-2 py-2">
                     <a href={item.url} className="block hover:bg-gray-100">

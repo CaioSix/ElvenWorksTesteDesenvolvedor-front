@@ -2,9 +2,9 @@ import React from 'react';
 
 interface ButtonProps {
   text: string;  
-  bgColor?: string; // Cor de fundo
-  textColor?: string; // Cor do texto
-  borderColor?: string; // Cor da borda
+  bgColor?: string; 
+  textColor?: string; 
+  borderColor?: string; 
 }
 
 const Button: React.FC<ButtonProps> = ({

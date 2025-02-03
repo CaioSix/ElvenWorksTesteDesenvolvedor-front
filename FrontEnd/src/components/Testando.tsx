@@ -5,7 +5,7 @@ import axios from "axios";
 const Testando = async () => {
     try {
         const response = await axios.get("http://localhost:3000/data");
-        console.log(response.data); // Já vem convertido para JSON
+        console.log(response.data); 
       } catch (error) {
         console.error("Erro ao buscar os dados:", error);
       }

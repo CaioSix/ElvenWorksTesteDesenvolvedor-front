@@ -1,8 +1,14 @@
-import React from 'react'
-import { PageMenu } from '../types/MenuHeaders';
-import { menuData } from '../types/MenuHeaders';
+import { MenuItem } from '../types/MenuHeaders'
 
-const MenuHeader = ({name, itens}) => {
+export interface PageMenu {
+
+  name: string;
+
+  itens: MenuItem[];
+
+}
+
+const MenuHeader: React.FC<PageMenu> = ({ name, itens }) => {
     return (
         <div>
         <div className="relative">

@@ -16,8 +16,7 @@ const InsertClients = ({
   const handleAddUser = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    const newClient = {
-      
+    const newClient = {      
       name: nameClient,
       role: roleClient,
     };

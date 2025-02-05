@@ -1,9 +1,8 @@
 import axios from "axios";
 import { Clients } from "../types/MockClientes";
 
-const API_URL = "http://localhost:3000/clientes"; // URL do seu JSON Server
+const API_URL = "http://localhost:3000/clientes"; 
 
-// Função para obter os clientes
 export const getData = async (): Promise<Clients[]> => {
   try {
     const response = await axios.get(API_URL);
@@ -14,7 +13,6 @@ export const getData = async (): Promise<Clients[]> => {
   }
 };
 
-// 🚀 Função DELETE para remover um usuário pelo ID
 export const deleteUser = async (id: string): Promise<void> => {
   try {
     await axios.delete(`${API_URL}/${id}`);

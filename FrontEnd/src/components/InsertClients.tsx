@@ -4,6 +4,7 @@ import { addUser } from "../hooks/AsyncDados";
 const InsertClients = ({
   isOpen,
   onClose,
+  
 }: {
   isOpen: boolean;
   onClose: () => void;

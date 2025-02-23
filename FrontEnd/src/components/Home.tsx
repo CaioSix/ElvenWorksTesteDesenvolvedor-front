@@ -7,6 +7,7 @@ import InsertClients from './InsertClients'
 
 const Home = () => {
   const [dados, setDados] = useState<Clients[]>([]);
+  const [atual, setAtual] = useState<boolean>(false)
   const [isModalOpen, setIsModalOpen] = useState(false);
 
 
@@ -16,13 +17,12 @@ const Home = () => {
       setDados(data);
     };
     fetchData();
-  }, [dados]);
+  }, [atual, isModalOpen]);
 
 
   return (
     <>
       <div className="bg-gradient-to-r  from-green-400 to-blue-500 p-10 text-white text-align-center rounded-xl mx-auto max-w-screen-lg mt-[20px]">
-
         <div className="pl-4 mx-14">
 
           <h1 className='text-center'>A melhor solução para monitoramento,
@@ -31,7 +31,7 @@ const Home = () => {
 
         </div>
 
-        {isModalOpen && <InsertClients isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
+        {isModalOpen && <InsertClients isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}  />}
         <div className="flex justify-center mt-4">
         <button
           onClick={() => setIsModalOpen(true)}
@@ -43,7 +43,7 @@ const Home = () => {
 
       </div>
      
-      <ClientList dados={dados} />
+      <ClientList dados={dados} att={setAtual}/>
 
 
     </>

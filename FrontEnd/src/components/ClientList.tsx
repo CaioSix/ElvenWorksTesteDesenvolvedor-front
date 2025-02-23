@@ -2,11 +2,12 @@ import { Clients } from '../types/MockClientes';
 import { deleteUser } from '../hooks/AsyncDados';
 
 
-const ClientList = ({ dados }: { dados: Clients[] }) => {
+const ClientList = ({ dados, att }: { dados: Clients[], att: React.Dispatch<React.SetStateAction<boolean>> }) => {
 
     const handleDelete = async (clientID: number) => {
         try {
             await deleteUser(clientID.toString());
+            att(prev => !prev);
             alert('Cliente deletado com sucesso!');
         } catch (error) {
             console.error('Erro ao deletar cliente:', error);
@@ -17,23 +18,21 @@ const ClientList = ({ dados }: { dados: Clients[] }) => {
         <div className="bg-green-100 mx-6 my-4 flex-1 h-3/4 p-4">
             <h1 className="text-center text-lg font-bold">Lista de Clientes</h1>
             <h4 className="text-center text-gray-700">Gerenciamento dos principais clientes:</h4>
-            <div className="flex flex-wrap gap-4 justify-center mt-4">
+            <div className="flex flex-wrap gap-4 justify-center mt-4 max-h-[500px] overflow-y-auto">
                 {dados.map((client) => (
-                    <div className="bg-white flex flex-col p-3 w-[278px] rounded-3xl shadow-md">
+                    <div key={client.id} className="bg-white flex flex-col p-3 w-[278px] rounded-3xl shadow-md">
                         <div className="p-4 bg-[#F4F5F7] rounded-b-3xl">
                             <div className="relative">
                                 <button
                                     onClick={() => client.id !== undefined && handleDelete(client.id)}
-                                    className="absolute top-2 right-2"
-                                >
+                                    className="absolute top-2 right-2">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         strokeWidth={1.5}
                                         stroke="currentColor"
-                                        className="text-red-400 size-6"
-                                    >
+                                        className="text-red-400 size-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </button>

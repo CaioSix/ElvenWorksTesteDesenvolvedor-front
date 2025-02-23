@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <div>
-            <div className="site-above-footer-wrap bg-gray-100 py-10 fixed bottom-0 left-0 right-0">
+            <div className="site-above-footer-wrap bg-gray-100 py-10  bottom-0 left-0 right-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     {/* Section 1 */}
                     <div className="site-footer-above-section-1 site-footer-section site-footer-section-1">

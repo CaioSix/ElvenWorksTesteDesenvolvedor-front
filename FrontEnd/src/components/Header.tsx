@@ -8,7 +8,7 @@ import { menuData } from '../types/MenuHeaders';
 
 const Header = () => {
   return (
-    <div className="w-full bg-[#fff] font-roboto flex items-center justify-between p-5 max-h-[80px] border-b border-gray-300">
+    <div className="w-full bg-[#fff] fnt-roboto flex items-center justify-between p-5 max-h-[80px] border-b border-gray-300">
       <div className="flex items-center space-x-4"  >
         <img src={Logo} />
 

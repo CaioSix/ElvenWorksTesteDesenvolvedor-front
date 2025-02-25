@@ -18,8 +18,8 @@ const ClientList = ({ dados, att }: { dados: Clients[], att: React.Dispatch<Reac
         <div className="bg-green-100 mx-6 my-4 flex-1 h-3/4 p-4">
             <h1 className="text-center text-lg font-bold">Lista de Clientes</h1>
             <h4 className="text-center text-gray-700">Gerenciamento dos principais clientes:</h4>
-            <div className="flex flex-wrap gap-4 justify-center mt-4 max-h-[500px] overflow-y-auto">
-                {dados.map((client) => (
+            <div className="flex flex-wrap gap-4 justify-center mt-4 max-w-screen-lg mx-auto">
+            {dados.map((client) => (
                     <div key={client.id} className="bg-white flex flex-col p-3 w-[278px] rounded-3xl shadow-md">
                         <div className="p-4 bg-[#F4F5F7] rounded-b-3xl">
                             <div className="relative">

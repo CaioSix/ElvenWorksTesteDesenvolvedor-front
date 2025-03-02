@@ -16,23 +16,23 @@ Vite
 
 Tailwind CSS
 
+## 📂 Estrutura do Projeto
 
-📂 Estrutura do Projeto
-
-FrontEnd/
-│-- dist/                 # Arquivos gerados após build
-│-- node_modules/         # Dependências do projeto
-│-- public/               # Arquivos públicos
-│-- src/                  # Código-fonte principal
-│   ├── components/       # Componentes reutilizáveis
-│   ├── hooks/            # Funções úteis
-│   ├── types/            # Interface de arquivos
-│-- .env.local            # Variáveis de ambiente (não commitadas)
-│-- .gitignore            # Arquivos ignorados pelo Git
-│-- index.html            # HTML principal
-│-- package.json          # Dependências e scripts
-│-- tsconfig.json         # Configuração do TypeScript
-│-- vite.config.ts        # Configuração do Vite
+| Caminho               | Descrição                               |
+|-----------------------|---------------------------------------|
+| `FrontEnd/dist/`      | Arquivos gerados após build          |
+| `FrontEnd/node_modules/` | Dependências do projeto             |
+| `FrontEnd/public/`    | Arquivos públicos                    |
+| `FrontEnd/src/`       | Código-fonte principal               |
+| `FrontEnd/src/components/` | Componentes reutilizáveis        |
+| `FrontEnd/src/hooks/` | Funções úteis                        |
+| `FrontEnd/src/types/` | Interface de arquivos                |
+| `.env.local`         | Variáveis de ambiente (não commitadas) |
+| `.gitignore`         | Arquivos ignorados pelo Git           |
+| `index.html`         | HTML principal                        |
+| `package.json`       | Dependências e scripts               |
+| `tsconfig.json`      | Configuração do TypeScript           |
+| `vite.config.ts`     | Configuração do Vite                 |
 
 📦 Instalação e Execução
 
@@ -60,7 +60,11 @@ Configuração do Clerk (Autenticação)
 
 Para que terceiros utilizem a aplicação, eles precisarão criar uma conta no Clerk e gerar suas próprias credenciais.
 
-Após criar a conta e configurar o projeto no painel do Clerk, eles devem adicionar suas chaves no arquivo .env.local:
+## ⚙️ Configuração do Clerk (Autenticação)
+
+Após criar a conta e configurar o projeto no painel do **[Clerk](https://clerk.com/)**, os usuários devem adicionar suas credenciais no arquivo `.env.local`:
+
+```ini
 VITE_CLERK_KEY=pk_test_sua_chave_aqui
 VITE_CLERK_SIGN_IN_URL=/sign-in
 VITE_CLERK_SIGN_UP_URL=/sign-up

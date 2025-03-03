@@ -5,6 +5,7 @@ ElvenWorks FrontEnd
 
 ![image](https://github.com/user-attachments/assets/181f4afe-438f-475f-86bc-675a2d730572)
 
+![image](https://github.com/user-attachments/assets/344ca906-814f-414b-a02b-3c164ae435b2)
 
 Este projeto é um front-end desenvolvido em React e TypeScript para a o teste de Desenvolvedor da  ElvenWorks. Ele utiliza Vite como bundler e está configurado para um ambiente moderno de desenvolvimento.
 

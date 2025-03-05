@@ -52,7 +52,7 @@ const InsertClients = ({
           className="border border-black rounded-lg w-full h-9 px-3 outline-none text-black"
         />
   
-        <label className="text-black text-sm font-medium mt-4">Cargo</label>
+        <label className="text-black text-sm font-medium mt-4">Role</label>
         <input
           type="text"
           value={roleClient}

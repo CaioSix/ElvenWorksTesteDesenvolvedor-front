@@ -1,8 +1,11 @@
 import axios from "axios";
 import { Clients } from "../types/MockClientes";
 
-const API_URL = "http://localhost:3000/clientes"; 
-// const API_URL = "http://34.228.77.216:3000/clientes"; 
+// const API_URL = "http://localhost:3000/clientes"; 
+const API_URL = "http://3.16.155.155:3000/clientes"; 
+
+
+
 
 export const getData = async (): Promise<Clients[]> => {
   try {
